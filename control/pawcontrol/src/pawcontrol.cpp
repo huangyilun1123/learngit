@@ -244,7 +244,7 @@ void PAW_CTR::Run()
         paw_ctr = "paw_idle";
     }
 
-    // printf("paw=%s\n", paw_state_str.c_str());
+     printf("paw=%s\n", paw_state_str.c_str());
     nh->setParam("paw_state", paw_ctr);
     paw_ctr_pub.publish(paw_ctr_msg);
 
