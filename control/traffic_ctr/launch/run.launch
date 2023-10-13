@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="traffic_ctr" type="traffic_ctr" name="traffic_ctr" output="screen">
+        <rosparam file="$(find traffic_ctr)/config/config1.yaml" command="load"/>
+    </node>
+
+    <include file="$(find gps)/launch/run.launch"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find traffic_ctr)/show.rviz" />
+</launch> 
